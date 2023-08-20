@@ -189,3 +189,7 @@ $(".services .header2 .service-header").hover(function () {
 		e.find("h3").removeClass("active").fadeIn("fast")
 	})
 })
+
+function ImageHover(el){
+    el.classList.add("filter");
+};

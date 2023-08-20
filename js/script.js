@@ -39,19 +39,7 @@ line.rotation.x = 180
 line.rotation.y = 10
 line.rotation.z = 0
 camera.lookAt(0, 0, 0);
-// const animate = function () {
-// 	requestAnimationFrame(animate);
-
-// 	line.rotation.x += 0.001;
-// 	line.rotation.y += 0.001;
-// 	line.rotation.z += 0.001;
-
-// 	renderer.render(scene, camera);
-// };
-
 renderer.render(scene, camera);
-//animate();
-
 document.addEventListener('mousemove', onDocumentMouseMove, false);
 function onDocumentMouseMove(event) {
 	const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
@@ -66,11 +54,32 @@ function onDocumentMouseMove(event) {
 const animate = () => {
 	requestAnimationFrame(animate);
 	renderer.render(scene, camera);
-  };
-  animate();
+};
+function changeColor(num) {
+	// line.scale.x = 0.5
+	for (let i = 0; i < 5; i++) {
+		if (i != num) {
+			document.getElementById('checkColor' + i).checked = false
+		}
+	}
+	if (num == 0) { line.material.color = new THREE.Color(0xAA37D3) }
+	if (num == 1) { line.material.color = new THREE.Color(0xff0000) }
+	if (num == 2) { line.material.color = new THREE.Color(0xfff700) }
+	if (num == 3) { line.material.color = new THREE.Color(0x0000ff) }
+	if (num == 4) { line.material.color = new THREE.Color(0xffffff) }
+}
+var slider = document.getElementById("myRange");
+var output = document.getElementById("obSize");
+slider.oninput = function () {
+    output.innerHTML = this.value;
+	line.scale.x = this.value / 10
+	line.scale.y = this.value / 10
+	line.scale.z = this.value / 10
+}
+animate();
 
 
-  function draw() {
+function draw() {
 	con.clearRect(0, 0, WIDTH, HEIGHT);
 	for (var e = 0; e < pxs.length; e++) {
 		pxs[e].fade();
@@ -95,7 +104,7 @@ function Circle() {
 		random: true,
 		blink: true
 	};
-	this.reset = function() {
+	this.reset = function () {
 		this.x = this.s.random ? WIDTH * Math.random() : this.s.xdef;
 		this.y = this.s.random ? HEIGHT * Math.random() : this.s.ydef;
 		this.r = (this.s.rmax - 1) * Math.random() + 1;
@@ -108,10 +117,10 @@ function Circle() {
 		this.s.xdrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
 		this.s.ydrift *= Math.random() * (Math.random() < .5 ? -1 : 1)
 	};
-	this.fade = function() {
+	this.fade = function () {
 		this.rt += this.s.rt
 	};
-	this.draw = function() {
+	this.draw = function () {
 		if (this.s.blink && (this.rt <= 0 || this.rt >= this.hl)) this.s.rt = this.s.rt * -1;
 		else if (this.rt >= this.hl) this.reset();
 		var e = 1 - this.rt / this.hl;
@@ -126,7 +135,7 @@ function Circle() {
 		con.fillStyle = g;
 		con.fill()
 	};
-	this.move = function() {
+	this.move = function () {
 		WIDTH = window.innerWidth;
 		HEIGHT = window.innerHeight;
 		this.x += this.rt / this.hl * this.dx;
@@ -134,10 +143,10 @@ function Circle() {
 		if (this.x > WIDTH || this.x < 0) this.dx *= -1;
 		if (this.y > HEIGHT || this.y < 0) this.dy *= -1
 	};
-	this.getX = function() {
+	this.getX = function () {
 		return this.x
 	};
-	this.getY = function() {
+	this.getY = function () {
 		return this.y
 	}
 }
@@ -148,7 +157,7 @@ var con;
 var g;
 var pxs = new Array;
 var rint = 60;
-$(document).ready(function() {
+$(document).ready(function () {
 	WIDTH = "100%";
 	HEIGHT = "100%";
 	$("#container").width(WIDTH).height(HEIGHT);
@@ -163,20 +172,20 @@ $(document).ready(function() {
 	}
 	setInterval(draw, rint)
 });
-$(".services .header2 .service-header").hover(function() {
+$(".services .header2 .service-header").hover(function () {
 	var e = $(this);
 	e.find("h3").hide();
 	$(this).parent().find(".header-bg").stop(true, true).animate({
 		width: "100%"
-	}, "fast", function() {
+	}, "fast", function () {
 		e.find("h3").addClass("active").fadeIn("fast")
 	})
-}, function() {
+}, function () {
 	var e = $(this);
 	e.find("h3").hide();
 	e.parent().find(".header-bg").stop(true, true).animate({
 		width: 70
-	}, "fast", function() {
+	}, "fast", function () {
 		e.find("h3").removeClass("active").fadeIn("fast")
 	})
 })

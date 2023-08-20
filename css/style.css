@@ -13,7 +13,26 @@ body {
 
 .mHead {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid transparent;
+}
+
+.mHead:hover {
+  border: 2px solid #AA37D3;
+  border-radius: 5px;
+  box-shadow:
+    0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem var(--neon-border-color),
+    inset 0 0 2rem var(--neon-border-color),
+    0 0 4rem var(--neon-border-color),
+    inset 0 0 4rem var(--neon-border-color);
+}
+
+.cases {
+  height: 300px;
 }
 
 @media (max-width: 768px) {
@@ -40,6 +59,19 @@ body {
   border: 2px solid #AA37D3;
   border-radius: 5px;
   padding: 15px;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.services:hover {
+  box-shadow:
+    0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem var(--neon-border-color),
+    inset 0 0 2rem var(--neon-border-color),
+    0 0 4rem var(--neon-border-color),
+    inset 0 0 4rem var(--neon-border-color);
 }
 
 .neonWrapper {
@@ -47,6 +79,22 @@ body {
   margin-top: 40px;
   background: #000;
   max-width: 530px;
+  text-shadow:
+    -0.2rem -0.2rem 1rem #fff,
+    0.2rem 0.2rem 1rem #fff,
+    0 0 2rem var(--neon-text-color),
+    0 0 4rem var(--neon-text-color),
+    0 0 6rem var(--neon-text-color),
+    0 0 8rem var(--neon-text-color),
+    0 0 10rem var(--neon-text-color);
+
+  box-shadow:
+    0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem var(--neon-border-color),
+    inset 0 0 2rem var(--neon-border-color),
+    0 0 4rem var(--neon-border-color),
+    inset 0 0 4rem var(--neon-border-color);
 }
 
 .mNeon {
@@ -58,7 +106,7 @@ body {
   border: 2px solid #fff;
   border-radius: 5px;
   text-transform: uppercase;
-  animation: flicker 10s infinite alternate;
+  /* animation: flicker 10s infinite alternate; */
 }
 
 .mNeon::-moz-selection {
@@ -73,44 +121,6 @@ body {
 
 .mNeon:focus {
   outline: none;
-}
-
-/* Animate neon flicker */
-@keyframes flicker {
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-
-    text-shadow:
-      -0.2rem -0.2rem 1rem #fff,
-      0.2rem 0.2rem 1rem #fff,
-      0 0 2rem var(--neon-text-color),
-      0 0 4rem var(--neon-text-color),
-      0 0 6rem var(--neon-text-color),
-      0 0 8rem var(--neon-text-color),
-      0 0 10rem var(--neon-text-color);
-
-    box-shadow:
-      0 0 .5rem #fff,
-      inset 0 0 .5rem #fff,
-      0 0 2rem var(--neon-border-color),
-      inset 0 0 2rem var(--neon-border-color),
-      0 0 4rem var(--neon-border-color),
-      inset 0 0 4rem var(--neon-border-color);
-  }
-
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-    box-shadow: none;
-  }
 }
 
 #pixie {
@@ -134,3 +144,57 @@ body {
   padding: 0;
   background-size: 100% 100%;
 }
+
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.checkbox-round:checked {
+  border: 5px solid #2f103b;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+
+  height: 5px;
+  border-radius: 5px;
+  background: #AA37D3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #AA37D3;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #AA37D3;
+  cursor: pointer;
+}
+
+.slidecontainer input {
+  background-color: #fff;
+  width: 100%;
+}
+

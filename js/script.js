@@ -11,7 +11,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, 4 / 3, 0.5, 100);
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setClearColor(0xffffff, 0);
-renderer.setSize(460, 340, false);
+renderer.setSize(360, 240, false);
 (document.getElementById('threejs') || document.body).appendChild(renderer.domElement);
 
 const size = 1;
@@ -51,6 +51,7 @@ function onDocumentMouseMove(event) {
 	line.rotation.y = vector.y;
 	line.rotation.z = vector.z;
 }
+
 const animate = () => {
 	requestAnimationFrame(animate);
 	renderer.render(scene, camera);

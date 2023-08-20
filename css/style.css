@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
 
 :root {
   --mainColor: #AA37D3;
@@ -6,13 +7,13 @@
   --text: #fff;
   --mainBackColor: linear-gradient(99deg, rgba(100, 2, 152, 0.40) 0%, rgba(128, 55, 167, 0.02) 94.70%, rgba(129, 55, 168, 0.00) 100%), #000;
   --mainBackLightColor: linear-gradient(32deg, rgba(255, 255, 255, 0.40) 0%, rgba(128, 55, 167, 0.02) 94.70%, rgba(129, 55, 168, 0.00) 100%), #BA99FF;
-  
+
 }
 
 body {
   background: var(--mainBackColor);
   color: var(--text);
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .mHead {
@@ -33,6 +34,17 @@ body {
     inset 0 0 2rem var(--mainColor),
     0 0 4rem var(--mainColor),
     inset 0 0 4rem var(--mainColor);
+}
+
+.gang {
+  text-shadow:
+    -0.2rem -0.2rem 1rem #fff,
+    0.2rem 0.2rem 1rem #fff,
+    0 0 2rem var(--mainColor),
+    0 0 4rem var(--mainColor),
+    0 0 6rem var(--mainColor),
+    0 0 8rem var(--mainColor),
+    0 0 10rem var(--mainColor);
 }
 
 .cases {
@@ -65,11 +77,12 @@ body {
   text-align: center;
 }
 
-.cases:hover{
-  .caseImg{
+.cases:hover {
+  .caseImg {
     filter: blur(1px);
   }
-  .text{
+
+  .text {
     display: none;
   }
 }
@@ -87,12 +100,6 @@ body {
 .headerH {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  .headerH {
-    background: black;
-  }
 }
 
 .services {
@@ -139,6 +146,7 @@ body {
 
 .mNeon {
   font-style: italic;
+  font-size: 50px;
   -webkit-text-stroke: 2px #fff;
   -webkit-text-fill-color: transparent;
   color: #fff;
@@ -147,6 +155,29 @@ body {
   border-radius: 5px;
   text-transform: uppercase;
   /* animation: flicker 10s infinite alternate; */
+}
+
+@media (max-width: 768px) {
+  .mNeon {
+    font-size: 25px;
+    text-align: center !important;
+  }
+
+  .myCube {
+    display: none;
+  }
+
+  .toCenter {
+    text-align: center !important;
+  }
+
+  .myInput {
+    width: 100% !important;
+  }
+
+  .myInputB {
+    width: 100% !important;
+  }
 }
 
 .mNeon::-moz-selection {
@@ -243,18 +274,19 @@ body {
 }
 
 .myInput {
-  margin-top: 10px; 
-  width: 80%; 
-  height: 40px; 
+  margin-top: 10px;
+  width: 80%;
+  height: 40px;
   background-color: transparent;
   border: 2px solid var(--mainColor);
   border-radius: 5px;
   color: #fff;
 }
+
 .myInputB {
-  margin-top: 10px; 
-  width: 80%; 
-  height: 40px; 
+  margin-top: 10px;
+  width: 80%;
+  height: 40px;
   background-color: var(--mainColor);
   border: 2px solid var(--mainColor);
   border-radius: 5px;

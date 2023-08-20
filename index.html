@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
   <!-- Style -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -33,7 +33,7 @@
             <h5 class="mHead">Почему мы</h5>
             <h5 class="mHead">Контакты</h5>
           </ul>
-          <ul class="navbar-nav ml-auto" style="color: #AA37D3; cursor: pointer;">
+          <ul class="navbar-nav ml-auto" style="color: var(--mainColor); cursor: pointer;">
             <h5 style="padding: 5px">8 (800) 555-35-35</h4>
           </ul>
         </div>
@@ -51,20 +51,25 @@
           создаем цифровые миры, воплощая идеи в веб-реальность!
           Где мы превращаем ваши концепции в удивительные онлайн-пространства. Мы - команда опытных дизайнеров,
           разработчиков и творческих стратегов, готовых воплотить ваши мечты в уникальные веб-сайты, приложения и
-          цифровые решения.</h4>
+          цифровые решения.</h5>
       </div>
-      <div class="col-lg-3 col-12" style="text-align: right; margin-left: 10px;">
+      <div class="col-lg-3 col-12">
         <div id="threejs">
         </div>
         <div style="text-align: center; margin-top: 10px;">
           <div>
-            <p style="text-align: center;">Play with me</p>
+            <p>Play with me</p>
             <p style="display: inline-block;">Цвет: </p>
-            <input type="checkbox" class="checkbox-round" onclick="changeColor(0)" id="checkColor0" style="background-color: #AA37D3;" checked/>
-            <input type="checkbox" class="checkbox-round" onclick="changeColor(1)" id="checkColor1" style="background-color: #ff0000;" />
-            <input type="checkbox" class="checkbox-round" onclick="changeColor(2)" id="checkColor2" style="background-color: #fff700;" />
-            <input type="checkbox" class="checkbox-round" onclick="changeColor(3)" id="checkColor3" style="background-color: #0000ff;" />
-            <input type="checkbox" class="checkbox-round" onclick="changeColor(4)" id="checkColor4" style="background-color: white;" />
+            <input type="checkbox" class="checkbox-round" onclick="changeColor(0)" id="checkColor0"
+              style="background-color: var(--mainColor);" checked />
+            <input type="checkbox" class="checkbox-round" onclick="changeColor(1)" id="checkColor1"
+              style="background-color: #ff0000;" />
+            <input type="checkbox" class="checkbox-round" onclick="changeColor(2)" id="checkColor2"
+              style="background-color: #fff700;" />
+            <input type="checkbox" class="checkbox-round" onclick="changeColor(3)" id="checkColor3"
+              style="background-color: #0000ff;" />
+            <input type="checkbox" class="checkbox-round" onclick="changeColor(4)" id="checkColor4"
+              style="background-color: rgb(0, 255, 0);" />
           </div>
           <div>
             <p style="display: inline-block;">Размер: </p>
@@ -79,6 +84,7 @@
   </div>
   <div class="container" style="margin-top: 5%;">
     <h2 style="margin-bottom: 20px;">Услуги</h2>
+    <hr style="color: #fff; background-color: #fff;">
     <div class="row">
       <div class="col-lg-4 col-12">
         <h4 class="services">Составление
@@ -107,15 +113,16 @@
   </div>
   <div class="container" style="margin-top: 5%;">
     <h2 style="margin-bottom: 20px; text-align: right;">Кейсы</h2>
+    <hr style="color: #fff; background-color: #fff;">
     <div class="row">
       <div class="col-lg-6 col-12">
-          <div class="cases services">
-            <div class="botwhithworks"></div>
-            <div class="text">
-              <h5>Доска объявлений, встроенная в Telegram, с web приложением</h5>
-              <h1 style="margin: 15% auto;">Bot with works</h1>
-            </div>
+        <div class="cases services">
+          <div class="caseImg" style="background-image: url(../img/BotWithWorks.png);"></div>
+          <div class="text">
+            <h5>Доска объявлений, встроенная в Telegram, с web приложением</h5>
+            <h1 style="margin: 15% auto;">Bot with works</h1>
           </div>
+        </div>
       </div>
       <div class="col-lg-6 col-12">
         <div class="cases services">
@@ -125,6 +132,39 @@
       </div>
     </div>
   </div>
+  <div class="container" style="margin-top: 5%;">
+    <h2 style="margin-bottom: 20px;">Почему мы</h2>
+    <hr style="color: #fff; background-color: #fff;">
+    <div class="row">
+      <div class="col-12">
+        <h5>Мы не используем шаблонные решения и все делаем индивидуально под заказчика. <br>Делаем качественно, проходя
+          все этапы: составление технического задания, проектирование, разработка дизайна, верстка, программирование,
+          выгрузка на сервер и сопровождение<br>Мы можем сделать не просто сайт, а полноценную информационную систему,
+          подходящую даже для крупного бизнеса будь то интернет магазин или CRM для сети предприятий</h5>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top: 5%;">
+    <h2 style="margin-bottom: 20px; text-align: right;">Контакты</h2>
+    <hr style="color: #fff; background-color: #fff;">
+    <div class="row">
+      <div class="col-lg-6 col-12" style="text-align: left;">
+        <h5>Остались вопросы? Свяжиетсь с нами!</h5>
+        <input type="text" class="myInput" placeholder="ФИО">
+        <input type="text" class="myInput" placeholder="Номер телефона">
+        <input type="text" class="myInput" placeholder="Почта">
+        <input type="button" class="myInputB" value="Отправить">
+      </div>
+      <div class="col-lg-6 col-12" style="text-align: right;">
+          <h5>Наши соцсети:</h5>
+          <h5>Телеграмм - example</h5>
+          <h5>Почта - example</h5>
+          <h5>ВК - example</h5>
+          <h5>Инста - example</h5>
+      </div>
+    </div>
+  </div>
+  <br>
   <!-- END header -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

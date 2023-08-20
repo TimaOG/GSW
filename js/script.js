@@ -66,7 +66,7 @@ function changeColor(num) {
 	if (num == 1) { line.material.color = new THREE.Color(0xff0000) }
 	if (num == 2) { line.material.color = new THREE.Color(0xfff700) }
 	if (num == 3) { line.material.color = new THREE.Color(0x0000ff) }
-	if (num == 4) { line.material.color = new THREE.Color(0xffffff) }
+	if (num == 4) { line.material.color = new THREE.Color('rgb(0, 255, 0)') }
 }
 var slider = document.getElementById("myRange");
 var output = document.getElementById("obSize");
@@ -193,3 +193,4 @@ $(".services .header2 .service-header").hover(function () {
 function ImageHover(el){
     el.classList.add("filter");
 };
+

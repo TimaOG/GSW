@@ -72,7 +72,7 @@ function changeColor(num) {
 var slider = document.getElementById("myRange");
 var output = document.getElementById("obSize");
 slider.oninput = function () {
-    output.innerHTML = this.value;
+	output.innerHTML = this.value;
 	line.scale.x = this.value / 10
 	line.scale.y = this.value / 10
 	line.scale.z = this.value / 10
@@ -191,7 +191,7 @@ $(".services .header2 .service-header").hover(function () {
 	})
 })
 
-function ImageHover(el){
-    el.classList.add("filter");
+function ImageHover(el) {
+	el.classList.add("filter");
 };
 

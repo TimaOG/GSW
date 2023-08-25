@@ -19,8 +19,8 @@
 
 <body>
   <canvas id="pixie" style="z-index: -999999;"></canvas>
-  <header>
-    <nav class="navbar navbar-expand-md headerH">
+  <header >
+    <nav id="menu" class="navbar navbar-expand-md headerH">
       <div class="container">
         <h3><b>GSW</b></h3>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsGSW"
@@ -29,11 +29,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarsGSW">
           <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
-            <h5 class="mHead">О нас</h5>
-            <h5 class="mHead">Услуги</h5>
-            <h5 class="mHead">Кейсы</h5>
-            <h5 class="mHead">Почему мы</h5>
-            <h5 class="mHead">Контакты</h5>
+            <h5 class="mHead"><a href="#about">О нас</a></h5>
+            <h5 class="mHead"><a href="#services">Услуги</a></h5>
+            <h5 class="mHead"><a href="#cases">Кейсы</a></h5>
+            <h5 class="mHead"><a href="#whywe">Почему мы</a></h5>
+            <h5 class="mHead"><a href="#contacts">Контакты</a></h5>
           </ul>
           <ul class="navbar-nav ml-auto myMail">
             <h5 style="padding: 5px">hello@gws.ru</h4>
@@ -42,7 +42,7 @@
       </div>
     </nav>
   </header>
-  <div class="container" style="margin-top: 5%;">
+  <div class="container" id="about" style="margin-top: 5%;">
     <div class="row">
       <div class="col-lg-8 col-12" style="margin-top: 2%;">
         <h2>Студия по разработке</h2>
@@ -85,7 +85,7 @@
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top: 5%;">
+  <div class="container" id="services" style="margin-top: 5%;">
     <h2 style="margin-bottom: 20px;" class="gang"><b>Услуги</b></h2>
     <hr style="color: #fff; background-color: #fff;">
     <div class="row">
@@ -114,7 +114,7 @@
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top: 5%;">
+  <div class="container" id="cases" style="margin-top: 5%;">
     <h2 style="margin-bottom: 20px; text-align: right;" class="gang">Кейсы</h2>
     <hr style="color: #fff; background-color: #fff;">
     <div class="row">
@@ -135,7 +135,7 @@
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top: 5%;">
+  <div class="container" id="whywe" style="margin-top: 5%;">
     <h2 style="margin-bottom: 20px;" class="gang">Почему мы</h2>
     <hr style="color: #fff; background-color: #fff;">
     <div class="row">
@@ -147,7 +147,7 @@
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top: 5%;">
+  <div class="container" id="contacts" style="margin-top: 5%;">
     <h2 style="margin-bottom: 20px; text-align: right;" class="gang">Контакты</h2>
     <hr style="color: #fff; background-color: #fff;">
     <div class="row">
